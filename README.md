@@ -2,9 +2,12 @@
 
 Compose your catch handlers
 
+```
+npm i compose-catch
+```
+
 handlers.js
 ```js
-
 export function forbidenHandler(error) {
     if (error.status === 403) {
         /* Do something */;
@@ -24,7 +27,6 @@ export function notFoundHandler(error) {
 export function commonHandler(error) {
     /* Do something */
 }
-
 ```
 
 ```js
@@ -40,7 +42,6 @@ try {
         commonHandler,
     )(error);
 }
-
 ```
 
 You also can create composed handler and use it in all project
@@ -55,7 +56,6 @@ export const composedHandler = composeCatch(
     notFoundHandler,
     commonHandler,
 );
-
 ```
 
 ```js
@@ -66,5 +66,4 @@ try {
 } catch (error) {
     return composedHandler(error);
 }
-
 ```
