@@ -1,4 +1,4 @@
-export default function composeHandlers(err, ...handlers) {
+export default (...handlers) => (err) => {
   let res = err;
 
   handlers.some(handler => {

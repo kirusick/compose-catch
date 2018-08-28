@@ -35,10 +35,36 @@ try {
     const res = await fetch();
 } catch (error) {
     return composeCatch(
-        error,
         forbidenHandler,
         notFoundHandler,
         commonHandler,
-    );
+    )(error);
 }
+
+```
+
+You also can create composed handler and use it in all project
+
+composedHandlers.js
+```js
+import composeCatch from 'compose-catch';
+import { forbidenHandler, notFoundHandler, commonHandler } from './handlers';
+
+export const composedHandler = composeCatch(
+    forbidenHandler,
+    notFoundHandler,
+    commonHandler,
+);
+
+```
+
+```js
+import { composedHandler } from './composedHandlers';
+
+try {
+    const res = await fetch();
+} catch (error) {
+    return composedHandler(error);
+}
+
 ```
