@@ -1,8 +1,8 @@
-"# compose-catch" 
+# compose-catch 
 
 Compose your catch handlers
 
-`js
+```js
 import composeCatch from 'compose-catch';
 import { forbidenHandler, notFoundHandler, commonHandler } from './handlers';
 
@@ -16,4 +16,4 @@ try {
         commonHandler,
     );
 }
-`
+```
