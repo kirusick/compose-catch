@@ -1,0 +1,24 @@
+{
+  "name": "compose-catch",
+  "version": "0.0.1",
+  "description": "Compose your catch handlers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksmolniy/compose-catch.git"
+  },
+  "keywords": [
+    "compose",
+    "catch",
+    "try"
+  ],
+  "author": "Kirill Orlovskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksmolniy/compose-catch/issues"
+  },
+  "homepage": "https://github.com/ksmolniy/compose-catch#readme"
+}
